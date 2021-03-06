@@ -28,4 +28,13 @@ data = list(reader)
 for row in data[:5]:
     print(row)
     
+# len of dataset
+len(data)
+
+# Exctract "Close"
+all_Close = []
+
+for row in data[1:]:
+    all_Close.append(row[4])
     
+all_Close
