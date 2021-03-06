@@ -19,6 +19,8 @@ params = {
     'events' : 'history'
 }
 
+response = requests.get(btc_history.format('BTC-USD'), params = params)
+
 # show first 5 rows to check the output 
 file = StringIO(response.text)
 reader = csv.reader(file)
