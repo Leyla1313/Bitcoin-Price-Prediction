@@ -32,9 +32,17 @@ for row in data[:5]:
 len(data)
 
 # Exctract "Close"
-all_Close = []
+Price = [] #  "Close"
 
 for row in data[1:]:
-    all_Close.append(row[4])
+    Price.append(row[4])
     
-all_Close
+Price
+
+# Rename Column to "Price" in df
+import pandas as pd
+d = {'Price' : pd.Series(Price)}
+df = pd.DataFrame(d)
+print(df)
+
+
